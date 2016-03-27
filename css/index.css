@@ -10,15 +10,19 @@ body {
     font-size: 1.1em;
     color: #fff;
 }
-/*清除浮动*/
-.clearfix::before,.clearfix::after {
-    content: ".";
-    height: 0;
-    line-height: 0;
-    display: block;
-    visibility: hidden;
-    clear: both;
+.sec_tit {
+    font-size:3em;
+    text-shadow: 2px 2px 0 #9BDED2;
 }
+/*清除浮动*/
+/*.clearfix::before,.clearfix::after {*/
+    /*content: ".";*/
+    /*height: 0;*/
+    /*line-height: 0;*/
+    /*display: block;*/
+    /*visibility: hidden;*/
+    /*clear: both;*/
+/*}*/
 
 
 /*第一屏*/
@@ -79,7 +83,9 @@ body {
 
 /*第二屏*/
 .section2 {
-    padding:0 150px;
+    width: 100%;
+    height: 100%;
+    /*padding:0 150px;*/
 }
 .section2 > div {
     display:flex;
@@ -102,8 +108,21 @@ body {
     transition:all 1s ease-in-out;
 }
 .section2 .info{
-    width: 635px;
-    height: 309px;
+    /*width: 635px;*/
+    /*height: 309px;*/
+    width: 100%;
+    height: 50%;
+}
+@media (min-width: 768px) {
+    .section2 {
+        width: 100%;
+        height: 100%;
+        padding:0 150px;
+    }
+    .section2 .info{
+        width: 635px;
+        height: 309px;
+    }
 }
 .section2 .info h2 {
     margin-bottom: 30px;
@@ -125,7 +144,7 @@ body {
 
 /*第三屏*/
 .section3 {
-    padding:0 130px;
+    /*padding:0 130px;*/
     position: relative;
     overflow: hidden;
 }
@@ -135,7 +154,18 @@ body {
     align-items:center;
 }
 .section3 .info {
+    height:100%;
     width: 100%;
+}
+@media (min-width: 768px) {
+    .section3 {
+        padding:0 130px;
+        position: relative;
+        overflow: hidden;
+    }
+    .section3 .info {
+        width: 100%;
+    }
 }
 .sec_tit {
     text-align: center;
@@ -146,6 +176,7 @@ body {
 }
 .project .row {
     margin-top:15px;
+    margin-left: 15px;
 }
 .por_list1 {
     float: left;
@@ -157,7 +188,7 @@ body {
     height: 100px;
     border-radius:40px 40px;
     background: #008A75 url(../images/zhujianer.png) no-repeat center;
-    margin-right:10px;
+    margin-right:5px;
 }
 .por_list2 i {
     background: #008A75 url(../images/biangua.png) no-repeat center;
@@ -193,7 +224,7 @@ body {
     transition:font-size 0.5s ease;
 }
 .por_list2,.por_list4,.por_list6,.por_list8 {
-    margin-left:10%;
+    margin-left:5%;
 }
 .project a:hover h3 {
     font-size:24px;
@@ -271,10 +302,6 @@ body {
     /*height: 299px;*/
     width: 100%;
     height: 50%;
-}
-.sec_tit {
-    font-size:3em;
-    text-shadow: 2px 2px 0 #9BDED2;
 }
 .info .section_box {
     /*width:540px;*/
