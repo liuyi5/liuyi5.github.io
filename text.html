@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+</head>
+<body>
+<button type="button" class="btn btn-lg btn-danger"
+        data-toggle="popover" title="Popover title"
+        data-content="And here's some amazing content. It's very engaging. Right?">
+    点我弹出/隐藏弹出框</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+    Popover on 右侧
+</button>
+
+<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+   data-toggle="popover" data-trigger="focus"
+   title="Dismissible popover"
+   data-content="And here's some amazing content. It's very engaging. Right?">
+    可消失的弹出框</a>
+
+<button id="example" type="button" class="btn btn-default" data-toggle="tooltip"
+        data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+</body>
+
+<a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
+
+<!-- Generated markup by the plugin -->
+<div class="tooltip top" role="tooltip">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        Some tooltip text!
+    </div>
+</div>
+</html>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="libs/bootstrap/js/bootstrap.js"></script>
+<script>
+$(function () {
+//    $('#example').tooltip(options)
+//    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="popover"]').popover()
+})
+</script>
